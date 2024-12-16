@@ -110,7 +110,7 @@ def generate_code_and_readme(data, folder_name, instructions):
     return response.json()
 
 # Function to handle error responses and retry
-def handle_errors(code, error, retry_limit=3):
+def handle_errors(code, error, retry_limit=10):
     for attempt in range(retry_limit):
         try:
             print("Attempt:", attempt + 1)
